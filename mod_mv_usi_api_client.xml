@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+	<name>mod_mv_usi_api_client</name>
+	<author>Mykhailo Vasylenko</author>
+	<creationDate>2024-01</creationDate>
+	<copyright>(C) 2024 Mykhailo Vasylenko</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>mkhvsl@gmail.com</authorEmail>
+	<authorUrl>https://github.com/mkhvsl</authorUrl>
+	<version>1.0.0</version>
+	<description>Joomla 5 Module for USI API Data https://search.usi.ch/api/docs/</description>
+	<namespace path="src">Joomla\Module\MvUsiApiClient</namespace>
+	<files>
+		<folder module="mod_mv_usi_api_client">services</folder>
+		<folder>src</folder>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="resource"
+					type="list"
+					label="Resource"
+					description="Resource"
+					default="normal"
+					validate="options"
+					>
+					<option value="courses">Courses</option>
+					<option value="publications">Publications</option>
+					<option value="projects">Projects</option>
+				</field>
+
+				<field
+					name="id"
+					type="text"
+					label="ID"
+					description="ID"
+					default=""
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

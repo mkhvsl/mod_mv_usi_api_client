@@ -86,7 +86,7 @@ if (property_exists($data, 'data'))
 </nav>
 <div class="uk-margin-top">
     <?php foreach ($groups as $groupName => $items) : ?>
-    <div class="uk-h3"><?php echo $groupName ?> (<?php echo count($items) ?>)</div>
+    <div class="uk-h3"><?php echo $groupName ?></div>
         <ul class="js-filter uk-list uk-list-disc uk-column-1-2@l">
             <?php foreach ($items as $item) : ?>
             <?php
